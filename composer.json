@@ -1,0 +1,16 @@
+{
+    "name": "bamboguirassy/designpattern-mi",
+    "autoload": {
+        "psr-4": {
+            "src\\App\\": "src/",
+            "src\\photos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Moussa FOFANA",
+            "email": "didegassama@gmail.com"
+        }
+    ],
+    "require": {}
+}
