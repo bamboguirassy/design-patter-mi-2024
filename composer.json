@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "src\\App\\": "src/",
-            "src\\photos\\": "src/"
+            "src\\Pizzeria\\": "src/pizzeria/",
+            "Builder\\": "src/builder/"
         }
     },
     "authors": [

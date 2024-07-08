@@ -1,29 +1,21 @@
 <?php
-use src\App\BaseBurger;
-use src\App\CheeseDecorator;
-use src\App\MayoDecorator;
-use src\App\SteakDecorator;
-
 require 'vendor/autoload.php';
 
+use Builder\AmericanPizzaBuilder;
+use Builder\ItalianPizzaBuilder;
+use Builder\Pizzeria;
+
+
+$italianPizzaBuilder = new ItalianPizzaBuilder();
+$pizzeria = new Pizzeria($italianPizzaBuilder);
+$pizzaBuilder = $pizzeria->getBuilder();
+// faire fonctionner le builder avec les méthodes de la classe enchainées
+$pizza = $pizzaBuilder->addGarnitures()->setTaille()->addPate()
+->addPate()->addSauce()->getPizza();
+
+echo $pizza.PHP_EOL;
 
 
 
 
-
-
-
-$baseBurger = new BaseBurger();
-
-$baseBurger = new CheeseDecorator($baseBurger);
-$baseBurger = new CheeseDecorator($baseBurger);
-$baseBurger = new SteakDecorator($baseBurger);
-$baseBurger = new MayoDecorator($baseBurger);
-
-
-$baseBurger->prepare();
-
-$baseBurger->cook();
-
-$baseBurger->box();
 
